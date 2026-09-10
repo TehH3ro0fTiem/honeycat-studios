@@ -23,6 +23,8 @@ const MODELS = [
   },
   {
     id: "spiderman-venom",
+    artist: "Tanuki Figures",
+    series: "Marvel",
     title: "Spider-Man vs Venom",
     images: [
       "images/spiderman-venom.jpg",
@@ -35,6 +37,8 @@ const MODELS = [
   },
   {
     id: "hunter-bloodborne",
+    artist: "Tanuki Figures",
+    series: "Bloodborne",
     title: "The Hunter - Bloodborne",
     images: [
       "images/hunter-bloodborne.jpg",
