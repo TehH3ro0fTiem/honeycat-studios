@@ -27,8 +27,14 @@ const MODELS = [
     series: "Marvel",
     title: "Spider-Man vs Venom",
     images: [
-      "images/tanuki-figures/marvel/spider-man/spiderman-venom-1.jpg",
-      "images/tanuki-figures/marvel/spider-man/spiderman-venom-2.jpg"
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-1.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-2.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-3.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-4.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-5.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-6.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-7.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-8.jpg",
     ],
     scale: "1/8 Scale",
     size: "Approx. 9 in (23 cm) tall",
@@ -39,7 +45,7 @@ const MODELS = [
     id: "hunter-bloodborne",
     artist: "KcStudio",
     series: "Bloodborne",
-    title: "The Hunter - Bloodborne",
+    title: "The Hunter",
     images: [
       "images/kc-studio/bloodborne/hunter/hunter-bloodborne-1.jpg",
       "images/kc-studio/bloodborne/hunter/hunter-bloodborne-2.jpg"
@@ -53,7 +59,7 @@ const MODELS = [
     id: "bulkamancer-malenia",
     artist: "Bulkamancer",
     series: "Elden Ring",
-    title: "Malenia, Blade of Miquella - Goddess of Rot",
+    title: "Malenia, Blade of Miquella",
     images: [
       "images/bulkamancer/elden-ring/malenia/malenia-1.jpg",
       "images/bulkamancer/elden-ring/malenia/malenia-2.jpg",
