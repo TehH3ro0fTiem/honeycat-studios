@@ -150,6 +150,20 @@ nav {
 }
 
 .card h3 {
-    color: red;
-    font-size: 30px;
+margin: 0;
+padding: 20px;
+ 
+text-align: center;
+ 
+color: #d4a843;
+font-family: "Playfair Display", serif;
+font-size: 1.25rem;
+font-weight: 700;
+line-height: 1.4;
+ 
+min-height: 80px;
+ 
+display: flex;
+align-items: center;
+justify-content: center;
 }
