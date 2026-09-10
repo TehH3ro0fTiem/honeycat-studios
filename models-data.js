@@ -48,7 +48,7 @@ const MODELS = [
     size: "Approx. 12 in (30 cm) tall",
     description: "A moody, atmospheric sculpt of the Hunter from Bloodborne, cloaked and ready for the hunt.",
     etsyUrl: "https://www.etsy.com/listing/4495305898/the-hunter-bloodborne-resin-model-kit-3d"
-  }
+  },
   {
     id: "bulkamancer-malenia",
     artist: "Bulkamancer",
@@ -70,9 +70,9 @@ const MODELS = [
     ],
     scale: "1/6 Scale",
     size: "Approx. 12 in (30 cm) tall",
-    description: "A moody, atmospheric sculpt of the Hunter from Bloodborne, cloaked and ready for the hunt.",
+    description: "A striking sculpt of Malenia, Blade of Miquella, captured mid-battle stance with intricate rot and blade detailing.",
     etsyUrl: "https://www.etsy.com/listing/4510471991/scarlet-lady-blade-of-rot-ring-of-elden"
-  }
+  },
   {
     id: "ca3d-spidey",
     artist: "CA3D Studios",
@@ -95,7 +95,7 @@ const MODELS = [
     ],
     scale: "1/6 Scale",
     size: "Approx. 12 in (30 cm) tall",
-    description: "A moody, atmospheric sculpt of the Hunter from Bloodborne, cloaked and ready for the hunt.",
+    description: "A dynamic sculpt of Spider-Man perched atop the Goblin's glider, capturing a tense mid-air standoff.",
     etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue"
   }
 ];
