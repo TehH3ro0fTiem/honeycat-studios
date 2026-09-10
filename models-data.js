@@ -37,7 +37,7 @@ const MODELS = [
   },
   {
     id: "hunter-bloodborne",
-    artist: "Tanuki Figures",
+    artist: "KcStudio",
     series: "Bloodborne",
     title: "The Hunter - Bloodborne",
     images: [
