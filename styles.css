@@ -264,7 +264,39 @@ nav {
 
 .insta-embeds .instagram-media {
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 340px !important;
     margin: 10px !important;
-    flex: 1 1 320px;
+    flex: 1 1 300px;
+}
+
+/* ===== Mobile Responsiveness ===== */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .links a {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+
+    .card img {
+        height: 280px;
+    }
 }
