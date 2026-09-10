@@ -50,7 +50,11 @@
 
                 <div class="product-layout">
                     <div class="model-gallery">
-                        <img id="main-image" src="${model.images[0]}" alt="${model.title}">
+                        <div class="main-image-wrap">
+                            <button class="gallery-arrow gallery-arrow-left" id="prev-image" aria-label="Previous image">&#10094;</button>
+                            <img id="main-image" src="${model.images[0]}" alt="${model.title}">
+                            <button class="gallery-arrow gallery-arrow-right" id="next-image" aria-label="Next image">&#10095;</button>
+                        </div>
                         <div class="thumbnail-row">
                             ${model.images.map((img, i) => `
                                 <img class="thumbnail ${i === 0 ? "active" : ""}" src="${img}" alt="${model.title} view ${i + 1}">
@@ -79,12 +83,28 @@
                 </div>
             `;
 
-            document.querySelectorAll(".thumbnail").forEach(thumb => {
-                thumb.addEventListener("click", () => {
-                    document.getElementById("main-image").src = thumb.src;
-                    document.querySelectorAll(".thumbnail").forEach(t => t.classList.remove("active"));
-                    thumb.classList.add("active");
-                });
+            const mainImage = document.getElementById("main-image");
+            const thumbnails = document.querySelectorAll(".thumbnail");
+            let currentIndex = 0;
+
+            function showImage(index) {
+                currentIndex = (index + model.images.length) % model.images.length;
+                mainImage.src = model.images[currentIndex];
+                thumbnails.forEach(t => t.classList.remove("active"));
+                thumbnails[currentIndex].classList.add("active");
+                thumbnails[currentIndex].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            }
+
+            thumbnails.forEach((thumb, i) => {
+                thumb.addEventListener("click", () => showImage(i));
+            });
+
+            document.getElementById("prev-image").addEventListener("click", () => showImage(currentIndex - 1));
+            document.getElementById("next-image").addEventListener("click", () => showImage(currentIndex + 1));
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+                if (e.key === "ArrowRight") showImage(currentIndex + 1);
             });
 
             document.getElementById("scale-select").addEventListener("change", (e) => {
