@@ -521,3 +521,14 @@ nav {
 .gallery-arrow-right {
     right: 12px;
 }
+
+/* ===== Compact Grid (Available Models) ===== */
+
+.browse-main .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.browse-main .card img {
+    height: 320px;
+}
