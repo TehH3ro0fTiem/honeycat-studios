@@ -1,15 +1,16 @@
 const MODELS = [
   {
     id: "leon-kennedy",
+    artist: "Tanuki Figures",
+    series: "Resident Evil",
     title: "Leon Kennedy - Resident Evil 9 Requiem",
     images: [
-      "images/leon-kennedy.jpg",
-      "images/leon-kennedy-2.jpg",
-      "images/leon-kennedy-3.jpg"
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-1.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-2.jpg"
     ],
     scale: "1/6 Scale",
     size: "Approx. 11.5 in (29 cm) tall",
-    description: "Original resin sculpt inspired by Leon Kennedy's appearance in Resident Evil 9: Requiem. Hand-finished and primed, ready for painting or display as-is.",
+    description: "Original resin sculpt inspired by Leon Kennedy's appearance in Resident Evil 9: Requiem.",
     etsyUrl: "https://www.etsy.com/listing/4495283661/leon-kennedy-resident-evil-9-requiem"
   },
   {
