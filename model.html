@@ -50,34 +50,41 @@
                 <h1>${model.title}</h1>
 
                 <div class="model-gallery">
-                <img id="main-image" src="${model.images[0]}" alt="${model.title}">
+                    <img id="main-image" src="${model.images[0]}" alt="${model.title}">
                     <div class="thumbnail-row">
-                    ${model.images.map((img, i) => `
-                    <img class="thumbnail ${i === 0 ? "active" : ""}" src="${img}" alt="${model.title} view ${i + 1}">
-                    `).join("")}
+                        ${model.images.map((img, i) => `
+                            <img class="thumbnail ${i === 0 ? "active" : ""}" src="${img}" alt="${model.title} view ${i + 1}">
+                        `).join("")}
                     </div>
                 </div>
 
                 <div class="model-specs">
                     <label for="scale-select"><strong>Scale:</strong></label>
                     <select id="scale-select">
-                    ${model.scaleOptions.map((opt, i) => `
-                    <option value="${i}">${opt.scale}</option>
-                    `).join("")}
+                        ${model.scaleOptions.map((opt, i) => `
+                            <option value="${i}">${opt.scale}</option>
+                        `).join("")}
                     </select>
 
-                <p id="size-display"><strong>Size:</strong> ${model.scaleOptions[0].size}</p>
-                <p>${model.description}</p>
+                    <p id="size-display"><strong>Size:</strong> ${model.scaleOptions[0].size}</p>
+                    <p>${model.description}</p>
                 </div>
 
-                    <a class="btn" id="etsy-link" href="${model.scaleOptions[0].etsyUrl}" target="_blank">View on Etsy</a>
-                    `;
+                <a class="btn" id="etsy-link" href="${model.scaleOptions[0].etsyUrl}" target="_blank">View on Etsy</a>
+            `;
 
-                    document.getElementById("scale-select").addEventListener("change", (e) => {
+            document.querySelectorAll(".thumbnail").forEach(thumb => {
+                thumb.addEventListener("click", () => {
+                    document.getElementById("main-image").src = thumb.src;
+                    document.querySelectorAll(".thumbnail").forEach(t => t.classList.remove("active"));
+                    thumb.classList.add("active");
+                });
+            });
+
+            document.getElementById("scale-select").addEventListener("change", (e) => {
                 const opt = model.scaleOptions[e.target.value];
                 document.getElementById("size-display").innerHTML = `<strong>Size:</strong> ${opt.size}`;
                 document.getElementById("etsy-link").href = opt.etsyUrl;
-                });
             });
         }
     </script>
