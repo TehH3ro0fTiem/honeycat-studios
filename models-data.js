@@ -99,8 +99,10 @@ const MODELS = [
       "images/ca3d/marvel/spider-man/spidey-glider-12.jpg",
       "images/ca3d/marvel/spider-man/spidey-glider-13.jpg"
     ],
-    scale: "1/6 Scale",
-    size: "Approx. 12 in (30 cm) tall",
+    scaleOptions: [
+    { scale: "1/4 Scale", size: "Approx. Dimensions: 14 in D x 16 in W x 25 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" },
+    { scale: "1/9 Scale", size: "Approx. Dimensions: 5 in D x 7 in W x 10 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" }
+    ],
     description: "A dynamic sculpt of Spider-Man perched atop the Goblin's glider, capturing a tense mid-air standoff.",
     etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue"
   }
