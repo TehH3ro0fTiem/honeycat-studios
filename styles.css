@@ -172,3 +172,48 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
+/* ===== Model Detail Gallery ===== */
+
+.model-gallery {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.model-gallery #main-image {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    overflow-x: auto;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.thumbnail:hover {
+    opacity: 0.85;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    outline: 2px solid #d4a843;
+}
+
+.model-specs {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
