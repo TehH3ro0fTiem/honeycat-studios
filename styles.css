@@ -338,3 +338,149 @@ nav {
     border: none;
     cursor: pointer;
 }
+
+/* ===== Browse Layout (Available Models) ===== */
+
+.browse-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.browse-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar-block {
+    margin-bottom: 28px;
+}
+
+.sidebar-block label,
+.sidebar-heading {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.sidebar-block input[type="text"],
+.sidebar-block select {
+    width: 100%;
+    background: #1e1e1e;
+    color: #f5f5f5;
+    border: 1px solid #2b2b2b;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: Inter, sans-serif;
+    box-sizing: border-box;
+}
+
+.sidebar-block input[type="text"]:focus,
+.sidebar-block select:focus {
+    outline: none;
+    border-color: #d4a843;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #cfcfcf;
+    cursor: pointer;
+}
+
+.checkbox-item input {
+    accent-color: #d4a843;
+    cursor: pointer;
+}
+
+.browse-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.results-count {
+    color: #9a9a9a;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.card-artist {
+    margin: -10px 0 10px;
+    color: #9a9a9a;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ===== Product Layout (Model Detail) ===== */
+
+.back-link {
+    display: inline-block;
+    color: #d4a843;
+    text-decoration: none;
+    margin-bottom: 24px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.product-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.product-layout .model-gallery {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+}
+
+.product-info {
+    flex: 1;
+    position: sticky;
+    top: 90px;
+}
+
+.product-meta {
+    color: #9a9a9a;
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+}
+
+.product-info h1 {
+    margin: 0 0 20px;
+}
+
+.product-info .model-specs {
+    max-width: none;
+    margin: 0 0 20px;
+}
+
+/* ===== Mobile: Browse & Product Layouts ===== */
+
+@media (max-width: 900px) {
+    .browse-layout,
+    .product-layout {
+        flex-direction: column;
+    }
+
+    .browse-sidebar,
+    .product-info {
+        width: 100%;
+        position: static;
+    }
+}

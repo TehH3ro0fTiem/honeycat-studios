@@ -28,17 +28,38 @@
     <section class="section">
         <h1>Available Models</h1>
 
-        <div class="filters">
-            <select id="artist-filter">
-                <option value="">All Artists</option>
-            </select>
+        <div class="browse-layout">
+            <aside class="browse-sidebar">
+                <div class="sidebar-block">
+                    <label for="search-input">Search</label>
+                    <input type="text" id="search-input" placeholder="Search models...">
+                </div>
 
-            <select id="series-filter">
-                <option value="">All Series</option>
-            </select>
+                <div class="sidebar-block">
+                    <label for="sort-select">Sort by</label>
+                    <select id="sort-select">
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                        <option value="artist-asc">Artist (A-Z)</option>
+                    </select>
+                </div>
+
+                <div class="sidebar-block">
+                    <span class="sidebar-heading">Artist</span>
+                    <div id="artist-checkboxes" class="checkbox-list"></div>
+                </div>
+
+                <div class="sidebar-block">
+                    <span class="sidebar-heading">Series</span>
+                    <div id="series-checkboxes" class="checkbox-list"></div>
+                </div>
+            </aside>
+
+            <div class="browse-main">
+                <p class="results-count" id="results-count"></p>
+                <div class="grid" id="models-grid"></div>
+            </div>
         </div>
-
-        <div class="grid" id="models-grid"></div>
     </section>
 
     <div class="footer">
@@ -48,36 +69,50 @@
     <script src="models-data.js"></script>
     <script>
         const grid = document.getElementById("models-grid");
-        const artistFilter = document.getElementById("artist-filter");
-        const seriesFilter = document.getElementById("series-filter");
+        const resultsCount = document.getElementById("results-count");
+        const searchInput = document.getElementById("search-input");
+        const sortSelect = document.getElementById("sort-select");
+        const artistBox = document.getElementById("artist-checkboxes");
+        const seriesBox = document.getElementById("series-checkboxes");
 
-        function populateFilterOptions() {
-            const artists = [...new Set(MODELS.map(m => m.artist))].sort();
-            const series = [...new Set(MODELS.map(m => m.series))].sort();
-
-            artists.forEach(a => {
-                const opt = document.createElement("option");
-                opt.value = a;
-                opt.textContent = a;
-                artistFilter.appendChild(opt);
-            });
-
-            series.forEach(s => {
-                const opt = document.createElement("option");
-                opt.value = s;
-                opt.textContent = s;
-                seriesFilter.appendChild(opt);
+        function buildCheckboxes(container, values, groupName) {
+            values.forEach(value => {
+                const id = groupName + "-" + value.replace(/\s+/g, "-").toLowerCase();
+                const wrapper = document.createElement("label");
+                wrapper.className = "checkbox-item";
+                wrapper.innerHTML = `
+                    <input type="checkbox" value="${value}" id="${id}" data-group="${groupName}">
+                    ${value}
+                `;
+                container.appendChild(wrapper);
             });
         }
 
-        function renderModels() {
-            const artist = artistFilter.value;
-            const series = seriesFilter.value;
+        function getChecked(container) {
+            return Array.from(container.querySelectorAll("input:checked")).map(cb => cb.value);
+        }
 
-            const filtered = MODELS.filter(m =>
-                (artist === "" || m.artist === artist) &&
-                (series === "" || m.series === series)
-            );
+        function renderModels() {
+            const query = searchInput.value.trim().toLowerCase();
+            const checkedArtists = getChecked(artistBox);
+            const checkedSeries = getChecked(seriesBox);
+            const sortMode = sortSelect.value;
+
+            let filtered = MODELS.filter(m => {
+                const matchesQuery = m.title.toLowerCase().includes(query);
+                const matchesArtist = checkedArtists.length === 0 || checkedArtists.includes(m.artist);
+                const matchesSeries = checkedSeries.length === 0 || checkedSeries.includes(m.series);
+                return matchesQuery && matchesArtist && matchesSeries;
+            });
+
+            filtered.sort((a, b) => {
+                if (sortMode === "title-asc") return a.title.localeCompare(b.title);
+                if (sortMode === "title-desc") return b.title.localeCompare(a.title);
+                if (sortMode === "artist-asc") return a.artist.localeCompare(b.artist);
+                return 0;
+            });
+
+            resultsCount.textContent = `Showing ${filtered.length} of ${MODELS.length} models`;
 
             grid.innerHTML = filtered.map(m => `
                 <div class="card">
@@ -85,6 +120,7 @@
                         <img src="${m.images[0]}" alt="${m.title}">
                     </a>
                     <h3>${m.title}</h3>
+                    <p class="card-artist">by ${m.artist}</p>
                     <a class="btn" href="model.html?id=${m.id}">View Details</a>
                 </div>
             `).join("");
@@ -94,10 +130,16 @@
             }
         }
 
-        artistFilter.addEventListener("change", renderModels);
-        seriesFilter.addEventListener("change", renderModels);
+        const artists = [...new Set(MODELS.map(m => m.artist))].sort();
+        const series = [...new Set(MODELS.map(m => m.series))].sort();
+        buildCheckboxes(artistBox, artists, "artist");
+        buildCheckboxes(seriesBox, series, "series");
 
-        populateFilterOptions();
+        searchInput.addEventListener("input", renderModels);
+        sortSelect.addEventListener("change", renderModels);
+        artistBox.addEventListener("change", renderModels);
+        seriesBox.addEventListener("change", renderModels);
+
         renderModels();
     </script>
 
