@@ -16,10 +16,10 @@ const MODELS = [
       "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-9.jpg",
       "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-10.jpg"
     ],
-    scale: "1/6 Scale",
-    size: "Approx. 11.5 in (29 cm) tall",
-    description: "Original resin sculpt inspired by Leon Kennedy's appearance in Resident Evil 9: Requiem.",
-    etsyUrl: "https://www.etsy.com/listing/4495283661/leon-kennedy-resident-evil-9-requiem"
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 11.5 in (29 cm) tall", etsyUrl: "https://www.etsy.com/listing/4495283661/leon-kennedy-resident-evil-9-requiem" }
+    ],
+    description: "Original resin sculpt inspired by Leon Kennedy's appearance in Resident Evil 9: Requiem."
   },
   {
     id: "spiderman-venom",
@@ -34,12 +34,12 @@ const MODELS = [
       "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-5.jpg",
       "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-6.jpg",
       "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-7.jpg",
-      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-8.jpg",
+      "images/tanuki-figures/marvel/spider-man-vs-venom/spiderman-venom-8.jpg"
     ],
-    scale: "1/8 Scale",
-    size: "Approx. 9 in (23 cm) tall",
-    description: "A dynamic diorama capturing Spider-Man and Venom mid-clash, sculpted with dramatic action posing and slime detailing.",
-    etsyUrl: "https://www.etsy.com/listing/4495843541/spider-man-vs-venom-resin-model-kit-3d"
+    scaleOptions: [
+      { scale: "1/8 Scale", size: "Approx. 9 in (23 cm) tall", etsyUrl: "https://www.etsy.com/listing/4495843541/spider-man-vs-venom-resin-model-kit-3d" }
+    ],
+    description: "A dynamic diorama capturing Spider-Man and Venom mid-clash, sculpted with dramatic action posing and slime detailing."
   },
   {
     id: "hunter-bloodborne",
@@ -50,10 +50,10 @@ const MODELS = [
       "images/kc-studio/bloodborne/hunter/hunter-bloodborne-1.jpg",
       "images/kc-studio/bloodborne/hunter/hunter-bloodborne-2.jpg"
     ],
-    scale: "1/6 Scale",
-    size: "Approx. 12 in (30 cm) tall",
-    description: "A moody, atmospheric sculpt of the Hunter from Bloodborne, cloaked and ready for the hunt.",
-    etsyUrl: "https://www.etsy.com/listing/4495305898/the-hunter-bloodborne-resin-model-kit-3d"
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "https://www.etsy.com/listing/4495305898/the-hunter-bloodborne-resin-model-kit-3d" }
+    ],
+    description: "A moody, atmospheric sculpt of the Hunter from Bloodborne, cloaked and ready for the hunt."
   },
   {
     id: "bulkamancer-malenia",
@@ -74,10 +74,10 @@ const MODELS = [
       "images/bulkamancer/elden-ring/malenia/malenia-11.jpg",
       "images/bulkamancer/elden-ring/malenia/malenia-12.jpg"
     ],
-    scale: "1/6 Scale",
-    size: "Approx. 12 in (30 cm) tall",
-    description: "A striking sculpt of Malenia, Blade of Miquella, captured mid-battle stance with intricate rot and blade detailing.",
-    etsyUrl: "https://www.etsy.com/listing/4510471991/scarlet-lady-blade-of-rot-ring-of-elden"
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "https://www.etsy.com/listing/4510471991/scarlet-lady-blade-of-rot-ring-of-elden" }
+    ],
+    description: "A striking sculpt of Malenia, Blade of Miquella, captured mid-battle stance with intricate rot and blade detailing."
   },
   {
     id: "ca3d-spidey",
@@ -100,10 +100,9 @@ const MODELS = [
       "images/ca3d/marvel/spider-man/spidey-glider-13.jpg"
     ],
     scaleOptions: [
-    { scale: "1/4 Scale", size: "Approx. Dimensions: 14 in D x 16 in W x 25 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" },
-    { scale: "1/9 Scale", size: "Approx. Dimensions: 5 in D x 7 in W x 10 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" }
+      { scale: "1/4 Scale", size: "Approx. Dimensions: 14 in D x 16 in W x 25 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" },
+      { scale: "1/9 Scale", size: "Approx. Dimensions: 5 in D x 7 in W x 10 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" }
     ],
-    description: "A dynamic sculpt of Spider-Man perched atop the Goblin's glider, capturing a tense mid-air standoff.",
-    etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue"
+    description: "A dynamic sculpt of Spider-Man perched atop the Goblin's glider, capturing a tense mid-air standoff."
   }
 ];
