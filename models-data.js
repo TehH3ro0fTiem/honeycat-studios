@@ -6,7 +6,15 @@ const MODELS = [
     title: "Leon Kennedy - Resident Evil 9 Requiem",
     images: [
       "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-1.jpg",
-      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-2.jpg"
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-2.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-3.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-4.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-5.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-6.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-7.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-8.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-9.jpg",
+      "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-10.jpg"
     ],
     scale: "1/6 Scale",
     size: "Approx. 11.5 in (29 cm) tall",
