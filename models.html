@@ -21,7 +21,7 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <a href="https://www.etsy.com/shop/HoneyCat3D"target="_blank">Shop on Etsy</a>
+                <a href="https://www.etsy.com/shop/HoneyCat3D" target="_blank">Shop on Etsy</a>
             </div>
         </nav>
     </header>
@@ -29,56 +29,78 @@
     <section class="section">
         <h1>Available Models</h1>
 
-        <div class="grid">
-            <div class="card">
-                <a href="model.html?id=leon-kennedy">
-                <img src="images/leon-kennedy.jpg" alt="Leon Kennedy - Resident Evil 9 Requiem">
-                </a>
-                <h3>Leon Kennedy - Resident Evil 9 Requiem</h3>
-                <a class="btn" href="model.html?id=leon-kennedy">View Details</a>
-            </div>
+        <div class="filters">
+            <select id="artist-filter">
+                <option value="">All Artists</option>
+            </select>
 
-            <div class="card">
-                <a href="model.html?id=spiderman-venom">
-                <img src="images/spiderman-venom.jpg" alt="Spider-Man vs Venom">
-                </a>
-                <h3>Spider-Man vs Venom</h3>
-                <a class="btn" href="model.html?id=spiderman-venom">View Details</a>
-            </div>
-
-            <div class="card">
-                <a href="model.html?id=hunter-bloodborne">
-                <img src="images/hunter-bloodborne.jpg" alt="The Hunter - Bloodborne">
-                </a>
-                <h3>The Hunter - Bloodborne</h3>
-                <a class="btn" href="model.html?id=hunter-bloodborne">View Details</a>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 4</div>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 5</div>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 6</div>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 7</div>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 8</div>
-            </div>
-
-            <div class="card">
-                <div class="ph">Model 9</div>
-            </div>
+            <select id="series-filter">
+                <option value="">All Series</option>
+            </select>
         </div>
+
+        <div class="grid" id="models-grid"></div>
     </section>
 
     <div class="footer">
         © HoneyCat3D • Premium Resin Collectibles
+    </div>
+
+    <script src="models-data.js"></script>
+    <script>
+        const grid = document.getElementById("models-grid");
+        const artistFilter = document.getElementById("artist-filter");
+        const seriesFilter = document.getElementById("series-filter");
+
+        function populateFilterOptions() {
+            const artists = [...new Set(MODELS.map(m => m.artist))].sort();
+            const series = [...new Set(MODELS.map(m => m.series))].sort();
+
+            artists.forEach(a => {
+                const opt = document.createElement("option");
+                opt.value = a;
+                opt.textContent = a;
+                artistFilter.appendChild(opt);
+            });
+
+            series.forEach(s => {
+                const opt = document.createElement("option");
+                opt.value = s;
+                opt.textContent = s;
+                seriesFilter.appendChild(opt);
+            });
+        }
+
+        function renderModels() {
+            const artist = artistFilter.value;
+            const series = seriesFilter.value;
+
+            const filtered = MODELS.filter(m =>
+                (artist === "" || m.artist === artist) &&
+                (series === "" || m.series === series)
+            );
+
+            grid.innerHTML = filtered.map(m => `
+                <div class="card">
+                    <a href="model.html?id=${m.id}">
+                        <img src="${m.images[0]}" alt="${m.title}">
+                    </a>
+                    <h3>${m.title}</h3>
+                    <a class="btn" href="model.html?id=${m.id}">View Details</a>
+                </div>
+            `).join("");
+
+            if (filtered.length === 0) {
+                grid.innerHTML = "<p>No models match those filters.</p>";
+            }
+        }
+
+        artistFilter.addEventListener("change", renderModels);
+        seriesFilter.addEventListener("change", renderModels);
+
+        populateFilterOptions();
+        renderModels();
+    </script>
+
+</body>
+</html>
