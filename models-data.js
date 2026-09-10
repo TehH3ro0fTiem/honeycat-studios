@@ -3,7 +3,7 @@ const MODELS = [
     id: "leon-kennedy",
     artist: "Tanuki Figures",
     series: "Resident Evil",
-    title: "Leon Kennedy - Resident Evil 9 Requiem",
+    title: "Leon S. Kennedy [Resident Evil 9: Requiem]",
     images: [
       "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-1.jpg",
       "images/tanuki-figures/resident-evil/leon-kennedy/leon-kennedy-2.jpg",
