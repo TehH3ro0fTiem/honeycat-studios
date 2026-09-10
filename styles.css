@@ -264,7 +264,7 @@ nav {
 
 .insta-embeds .instagram-media {
     width: 100% !important;
-    max-width: 340px !important;
+    max-width: 400px !important;
     margin: 10px !important;
-    flex: 1 1 300px;
+    flex: 1 1 320px;
 }
