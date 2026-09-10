@@ -299,6 +299,10 @@ nav {
     .card img {
         height: 280px;
     }
+
+    .browse-main .card img {
+        height: 220px;
+    }
 }
 
 /* ===== Contact Form ===== */
