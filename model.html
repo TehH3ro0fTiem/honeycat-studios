@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Model - HoneyCat3D</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <strong class="gold">HoneyCat3D</strong>
+            </div>
+
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="models.html">Available Models</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://www.etsy.com/shop/HoneyCat3D" target="_blank">Shop on Etsy</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section" id="model-detail">
+        <p>Loading model...</p>
+    </section>
+
+    <div class="footer">
+        © HoneyCat3D • Premium Resin Collectibles
+    </div>
+
+    <script src="models-data.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const modelId = params.get("id");
+        const model = MODELS.find(m => m.id === modelId);
+        const container = document.getElementById("model-detail");
+
+        if (!model) {
+            container.innerHTML = "<p>Model not found. <a href='models.html'>Back to Available Models</a></p>";
+        } else {
+            document.title = model.title + " - HoneyCat3D";
+
+            container.innerHTML = `
+                <h1>${model.title}</h1>
+
+                <div class="model-gallery">
+                    <img id="main-image" src="${model.images[0]}" alt="${model.title}">
+                    <div class="thumbnail-row">
+                        ${model.images.map((img, i) => `
+                            <img class="thumbnail ${i === 0 ? "active" : ""}" src="${img}" alt="${model.title} view ${i + 1}">
+                        `).join("")}
+                    </div>
+                </div>
+
+                <div class="model-specs">
+                    <p><strong>Scale:</strong> ${model.scale}</p>
+                    <p><strong>Size:</strong> ${model.size}</p>
+                    <p>${model.description}</p>
+                </div>
+
+                <a class="btn" href="${model.etsyUrl}" target="_blank">View on Etsy</a>
+            `;
+
+            document.querySelectorAll(".thumbnail").forEach(thumb => {
+                thumb.addEventListener("click", () => {
+                    document.getElementById("main-image").src = thumb.src;
+                    document.querySelectorAll(".thumbnail").forEach(t => t.classList.remove("active"));
+                    thumb.classList.add("active");
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
