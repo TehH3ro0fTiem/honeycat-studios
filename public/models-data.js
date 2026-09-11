@@ -111,12 +111,12 @@ const MODELS = [
     series: "Hitman",
     title: "Agent 47",
     images: [
-      "images/kc-studio/hitman/agent-47/agent-47-1.jpg",
-      "images/kc-studio/hitman/agent-47/agent-47-2.jpg",
-      "images/kc-studio/hitman/agent-47/agent-47-3.jpg",
-      "images/kc-studio/hitman/agent-47/agent-47-4.jpg",
-      "images/kc-studio/hitman/agent-47/agent-47-5.jpg",
-      "images/kc-studio/hitman/agent-47/agent-47-6.jpg"
+      "images/kc-studio/hitman/agent-47/agent-47-1.png",
+      "images/kc-studio/hitman/agent-47/agent-47-2.png",
+      "images/kc-studio/hitman/agent-47/agent-47-3.png",
+      "images/kc-studio/hitman/agent-47/agent-47-4.png",
+      "images/kc-studio/hitman/agent-47/agent-47-5.png",
+      "images/kc-studio/hitman/agent-47/agent-47-6.png"
     ],
     scaleOptions: [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
@@ -129,13 +129,13 @@ const MODELS = [
     series: "Final Fantasy 7",
     title: "Cloud Strife",
     images: [
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-1.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-2.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-3.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-4.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-5.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-6.jpg",
-      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-7.jpg"
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-1.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-2.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-3.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-4.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-5.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-6.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-7.png"
     ],
     scaleOptions: [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
@@ -143,17 +143,17 @@ const MODELS = [
     description: "Buster Sword in hand, this sculpt captures Cloud Strife mid-stride with SOLDIER-grade attitude and iconic spiked hair."
   },
   {
-    id: "judge-dread",
+    id: "judge-dredd",
     artist: "KcStudio",
     series: "Judge Dredd",
     title: "Judge Dredd",
     images: [
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-1.jpg",
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-2.jpg",
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-3.jpg",
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-4.jpg",
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-5.jpg",
-      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-6.jpg"
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-1.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-2.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-3.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-4.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-5.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-6.png"
     ],
     scaleOptions: [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
@@ -166,14 +166,14 @@ const MODELS = [
     series: "Marvel",
     title: "Moon Knight",
     images: [
-      "images/kc-studio/marvel/moon-knight/moon-knight-1.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-2.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-3.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-4.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-5.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-6.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-7.jpg",
-      "images/kc-studio/marvel/moon-knight/moon-knight-8.jpg"
+      "images/kc-studio/marvel/moon-knight/moon-knight-1.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-2.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-3.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-4.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-5.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-6.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-7.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-8.png"
     ],
     scaleOptions: [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
@@ -186,12 +186,12 @@ const MODELS = [
     series: "DC",
     title: "Superman [2026]",
     images: [
-      "images/kc-studio/dc/superman-2026/superman-1.jpg",
-      "images/kc-studio/dc/superman-2026/superman-2.jpg",
-      "images/kc-studio/dc/superman-2026/superman-3.jpg",
-      "images/kc-studio/dc/superman-2026/superman-4.jpg",
-      "images/kc-studio/dc/superman-2026/superman-5.jpg",
-      "images/kc-studio/dc/superman-2026/superman-6.jpg"
+      "images/kc-studio/dc/superman-2026/superman-1.png",
+      "images/kc-studio/dc/superman-2026/superman-2.png",
+      "images/kc-studio/dc/superman-2026/superman-3.png",
+      "images/kc-studio/dc/superman-2026/superman-4.png",
+      "images/kc-studio/dc/superman-2026/superman-5.png",
+      "images/kc-studio/dc/superman-2026/superman-6.png"
     ],
     scaleOptions: [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
