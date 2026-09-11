@@ -589,6 +589,11 @@ nav {
 
 @media (min-width: 901px) {
     .model-gallery #main-image {
-        object-position: center 25%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .main-image-wrap {
+        background: #1e1e1e;
     }
 }
