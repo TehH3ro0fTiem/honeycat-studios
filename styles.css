@@ -592,7 +592,7 @@ nav {
         width: auto;
         max-width: 100%;
         height: auto;
-        max-height: 560px;
+        max-height: 760px;
         object-fit: contain;
         display: block;
         margin: 0 auto;
@@ -606,8 +606,8 @@ nav {
     }
 
     .product-layout .model-gallery {
-        flex: 0 1 460px;
-        max-width: 460px;
+        flex: 0 1 640px;
+        max-width: 640px;
     }
 
     .product-info {
