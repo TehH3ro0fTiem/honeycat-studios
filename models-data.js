@@ -104,5 +104,98 @@ const MODELS = [
       { scale: "1/9 Scale", size: "Approx. Dimensions: 5 in D x 7 in W x 10 in H", etsyUrl: "https://www.etsy.com/listing/4497859644/spider-man-3d-printed-scale-resin-statue" }
     ],
     description: "A dynamic sculpt of Spider-Man perched atop the Goblin's glider, capturing a tense mid-air standoff."
+  },
+  {
+    id: "agent-47",
+    artist: "KcStudio",
+    series: "Hitman",
+    title: "Agent 47",
+    images: [
+      "images/kc-studio/hitman/agent-47/agent-47-1.png",
+      "images/kc-studio/hitman/agent-47/agent-47-2.png",
+      "images/kc-studio/hitman/agent-47/agent-47-3.png",
+      "images/kc-studio/hitman/agent-47/agent-47-4.png",
+      "images/kc-studio/hitman/agent-47/agent-47-5.png",
+      "images/kc-studio/hitman/agent-47/agent-47-6.png"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A sharply tailored sculpt of the World's Greatest Assassin, rendered in cold, precise detail down to the barcode tattoo."
+  },
+  {
+    id: "cloud-strife",
+    artist: "KcStudio",
+    series: "Final Fantasy 7",
+    title: "Cloud Strife",
+    images: [
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-1.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-2.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-3.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-4.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-5.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-6.png",
+      "images/kc-studio/final-fantasy/cloud-strife/cloud-strife-7.png"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "Buster Sword in hand, this sculpt captures Cloud Strife mid-stride with SOLDIER-grade attitude and iconic spiked hair."
+  },
+  {
+    id: "judge-dread",
+    artist: "KcStudio",
+    series: "Judge Dredd",
+    title: "Judge Dredd",
+    images: [
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-1.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-2.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-3.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-4.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-5.png",
+      "images/kc-studio/judge-dredd/judge-dredd/judge-dredd-6.png"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A hard-edged sculpt of Mega-City One's toughest lawman, helmet down and judgment ready."
+  },
+  {
+    id: "moon-knight",
+    artist: "KcStudio",
+    series: "Marvel",
+    title: "Moon Knight",
+    images: [
+      "images/kc-studio/marvel/moon-knight/moon-knight-1.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-2.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-3.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-4.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-5.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-6.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-7.png",
+      "images/kc-studio/marvel/moon-knight/moon-knight-8.png"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A bone-white sculpt of Marvel's Fist of Khonshu, cloaked in bandage-wrapped menace and moonlit detail."
+  },
+  {
+    id: "superman-2026",
+    artist: "KcStudio",
+    series: "DC",
+    title: "Superman [2026]",
+    images: [
+      "images/kc-studio/dc/superman-2026/superman-1.png",
+      "images/kc-studio/dc/superman-2026/superman-2.png",
+      "images/kc-studio/dc/superman-2026/superman-3.png",
+      "images/kc-studio/dc/superman-2026/superman-4.png",
+      "images/kc-studio/dc/superman-2026/superman-5.png",
+      "images/kc-studio/dc/superman-2026/superman-6.png"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A heroic sculpt of the Man of Steel's 2026 screen design, capturing his iconic cape and unmistakable silhouette."
   }
 ];
