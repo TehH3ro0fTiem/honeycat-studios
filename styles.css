@@ -589,11 +589,28 @@ nav {
 
 @media (min-width: 901px) {
     .model-gallery #main-image {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 560px;
         object-fit: contain;
-        object-position: center;
+        display: block;
+        margin: 0 auto;
     }
 
     .main-image-wrap {
         background: #1e1e1e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-layout .model-gallery {
+        flex: 0 1 460px;
+        max-width: 460px;
+    }
+
+    .product-info {
+        flex: 1;
     }
 }
