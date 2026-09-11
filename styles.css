@@ -185,7 +185,7 @@ nav {
     width: 100%;
     max-height: 500px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     border-radius: 12px;
     display: block;
     cursor: zoom-in;
@@ -583,4 +583,12 @@ nav {
     max-height: 100%;
     object-fit: contain;
     border-radius: 8px;
+}
+
+/* ===== Desktop-only Gallery Crop Adjustment ===== */
+
+@media (min-width: 901px) {
+    .model-gallery #main-image {
+        object-position: center 25%;
+    }
 }
