@@ -81,10 +81,16 @@
                         <a class="btn" id="etsy-link" href="${model.scaleOptions[0].etsyUrl}" target="_blank">View on Etsy</a>
                     </div>
                 </div>
+
+                <div class="lightbox" id="lightbox">
+                    <img id="lightbox-image" src="" alt="${model.title} enlarged">
+                </div>
             `;
 
             const mainImage = document.getElementById("main-image");
             const thumbnails = document.querySelectorAll(".thumbnail");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = document.getElementById("lightbox-image");
             let currentIndex = 0;
 
             function showImage(index) {
@@ -93,6 +99,18 @@
                 thumbnails.forEach(t => t.classList.remove("active"));
                 thumbnails[currentIndex].classList.add("active");
                 thumbnails[currentIndex].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+                if (lightbox.classList.contains("open")) {
+                    lightboxImage.src = model.images[currentIndex];
+                }
+            }
+
+            function openLightbox() {
+                lightboxImage.src = model.images[currentIndex];
+                lightbox.classList.add("open");
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove("open");
             }
 
             thumbnails.forEach((thumb, i) => {
@@ -102,9 +120,13 @@
             document.getElementById("prev-image").addEventListener("click", () => showImage(currentIndex - 1));
             document.getElementById("next-image").addEventListener("click", () => showImage(currentIndex + 1));
 
+            mainImage.addEventListener("click", openLightbox);
+            lightbox.addEventListener("click", closeLightbox);
+
             document.addEventListener("keydown", (e) => {
                 if (e.key === "ArrowLeft") showImage(currentIndex - 1);
                 if (e.key === "ArrowRight") showImage(currentIndex + 1);
+                if (e.key === "Escape") closeLightbox();
             });
 
             document.getElementById("scale-select").addEventListener("change", (e) => {
