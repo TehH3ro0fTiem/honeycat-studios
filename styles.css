@@ -184,7 +184,7 @@ nav {
 .model-gallery #main-image {
     width: 100%;
     max-height: 500px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     border-radius: 12px;
     display: block;
@@ -313,7 +313,7 @@ nav {
     }
 
     .product-layout .model-gallery {
-        max-width: 420px;
+        max-width: 92%;
         margin: 0 auto;
     }
 }
@@ -507,6 +507,8 @@ nav {
 
 .main-image-wrap {
     position: relative;
+    background: #1e1e1e;
+    border-radius: 12px;
 }
 
 .gallery-arrow {
