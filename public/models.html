@@ -66,7 +66,11 @@
         © HoneyCat3D • Premium Resin Collectibles
     </div>
 
-    <script src="models-data.js?v=2"></script>
+<<<<<<< HEAD
+    <script src="models-data.js?v=4"></script>
+=======
+    <script src="models-data.js?v=3"></script>
+>>>>>>> be598347f936140faecd409981bed768cd89e3e6
     <script>
         const grid = document.getElementById("models-grid");
         const resultsCount = document.getElementById("results-count");
@@ -75,14 +79,15 @@
         const artistBox = document.getElementById("artist-checkboxes");
         const seriesBox = document.getElementById("series-checkboxes");
 
-        function buildCheckboxes(container, values, groupName) {
-            values.forEach(value => {
+        function buildCheckboxes(container, valueCounts, groupName) {
+            valueCounts.forEach(({ value, count }) => {
                 const id = groupName + "-" + value.replace(/\s+/g, "-").toLowerCase();
                 const wrapper = document.createElement("label");
                 wrapper.className = "checkbox-item";
                 wrapper.innerHTML = `
                     <input type="checkbox" value="${value}" id="${id}" data-group="${groupName}">
                     ${value}
+                    <span class="checkbox-count">${count}</span>
                 `;
                 container.appendChild(wrapper);
             });
@@ -130,10 +135,20 @@
             }
         }
 
-        const artists = [...new Set(MODELS.map(m => m.artist))].sort();
-        const series = [...new Set(MODELS.map(m => m.series))].sort();
-        buildCheckboxes(artistBox, artists, "artist");
-        buildCheckboxes(seriesBox, series, "series");
+        function countBy(key) {
+            const counts = {};
+            MODELS.forEach(m => {
+                counts[m[key]] = (counts[m[key]] || 0) + 1;
+            });
+            return Object.keys(counts)
+                .sort()
+                .map(value => ({ value, count: counts[value] }));
+        }
+
+        const artistCounts = countBy("artist");
+        const seriesCounts = countBy("series");
+        buildCheckboxes(artistBox, artistCounts, "artist");
+        buildCheckboxes(seriesBox, seriesCounts, "series");
 
         searchInput.addEventListener("input", renderModels);
         sortSelect.addEventListener("change", renderModels);
