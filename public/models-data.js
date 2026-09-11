@@ -143,7 +143,7 @@ const MODELS = [
     description: "Buster Sword in hand, this sculpt captures Cloud Strife mid-stride with SOLDIER-grade attitude and iconic spiked hair."
   },
   {
-    id: "judge-dread",
+    id: "judge-dredd",
     artist: "KcStudio",
     series: "Judge Dredd",
     title: "Judge Dredd",
@@ -197,5 +197,135 @@ const MODELS = [
       { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
     ],
     description: "A heroic sculpt of the Man of Steel's 2026 screen design, capturing his iconic cape and unmistakable silhouette."
+  },
+  {
+    id: "lady-maria",
+    artist: "KcStudio",
+    series: "Bloodborne",
+    title: "Lady Maria",
+    images: [
+      "images/kc-studio/bloodborne/lady-maria/lady-maria-1.jpg",
+      "images/kc-studio/bloodborne/lady-maria/lady-maria-2.jpg",
+	  "images/kc-studio/bloodborne/lady-maria/lady-maria-3.jpg",
+	  "images/kc-studio/bloodborne/lady-maria/lady-maria-4.jpg",
+	  "images/kc-studio/bloodborne/lady-maria/lady-maria-5.jpg",
+	  "images/kc-studio/bloodborne/lady-maria/lady-maria-6.jpg",
+	  "images/kc-studio/bloodborne/lady-maria/lady-maria-7.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A refined, blade-sharp sculpt of Lady Maria of the Astral Clocktower, rendered mid-duel with her signature Rakuyo daggers."
+  },
+  {
+    id: "absolute-batman",
+    artist: "KcStudio",
+    series: "DC",
+    title: "Absolute Batman",
+    images: [
+      "images/kc-studio/dc/absolute-batman/absolute-batman-1.jpg",
+      "images/kc-studio/dc/absolute-batman/absolute-batman-2.jpg",
+      "images/kc-studio/dc/absolute-batman/absolute-batman-3.jpg",
+      "images/kc-studio/dc/absolute-batman/absolute-batman-4.jpg",
+      "images/kc-studio/dc/absolute-batman/absolute-batman-5.jpg",
+      "images/kc-studio/dc/absolute-batman/absolute-batman-6.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A brutal, armor-plated take on the Absolute Batman, built for close-quarters combat with a stripped-down, industrial edge."
+  },
+  {
+    id: "gordon-freeman",
+    artist: "KcStudio",
+    series: "Half-Life",
+    title: "Gordon Freeman",
+    images: [
+      "images/kc-studio/half-life/gordon-freeman/freeman-1.jpg",
+      "images/kc-studio/half-life/gordon-freeman/freeman-2.jpg",
+      "images/kc-studio/half-life/gordon-freeman/freeman-3.jpg",
+      "images/kc-studio/half-life/gordon-freeman/freeman-4.jpg",
+      "images/kc-studio/half-life/gordon-freeman/freeman-5.jpg",
+      "images/kc-studio/half-life/gordon-freeman/freeman-6.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A weary, resolute sculpt of Gordon Freeman, crowbar in hand and HEV suit weathered from the fight ahead."
+  },
+  {
+    id: "he-man",
+    artist: "KcStudio",
+    series: "Masters of the Universe",
+    title: "He-Man",
+    images: [
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-1.jpg",
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-2.jpg",
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-3.jpg",
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-4.jpg",
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-5.jpg",
+      "images/kc-studio/masters-of-the-universe/he-man/he-man-6.jpg",
+	  "images/kc-studio/masters-of-the-universe/he-man/he-man-7.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A commanding sculpt of He-Man, Power Sword raised, channeling the full strength of Grayskull."
+  },
+  {
+    id: "solid-snake",
+    artist: "KcStudio",
+    series: "Metal Gear Solid",
+    title: "Solid Snake",
+    images: [
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-1.jpg",
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-2.jpg",
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-3.jpg",
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-4.jpg",
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-5.jpg",
+      "images/kc-studio/metal-gear-solid/solid-snake/solid-snake-6.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A stealth-ready sculpt of Solid Snake, capturing his tactical gear and battle-hardened focus."
+  },
+  {
+    id: "rick-oconnell",
+    artist: "KcStudio",
+    series: "The Mummy",
+    title: "Rick O'Connell",
+    images: [
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-1.jpg",
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-2.jpg",
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-3.jpg",
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-4.jpg",
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-5.jpg",
+      "images/kc-studio/the-mummy/rick-oconnell/rick-oconnell-6.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "An adventurous sculpt of Rick O'Connell, whip and rifle ready for whatever the tomb throws at him."
+  },
+  {
+    id: "v",
+    artist: "KcStudio",
+    series: "V for Vendetta",
+    title: "V",
+    images: [
+      "images/kc-studio/v-for-vendetta/v/v-1.jpg",
+      "images/kc-studio/v-for-vendetta/v/v-2.jpg",
+      "images/kc-studio/v-for-vendetta/v/v-3.jpg",
+      "images/kc-studio/v-for-vendetta/v/v-4.jpg",
+      "images/kc-studio/v-for-vendetta/v/v-5.jpg",
+      "images/kc-studio/v-for-vendetta/v/v-6.jpg",
+	  "images/kc-studio/v-for-vendetta/v/v-7.jpg",
+	  "images/kc-studio/v-for-vendetta/v/v-8.jpg"
+    ],
+    scaleOptions: [
+      { scale: "1/6 Scale", size: "Approx. 12 in (30 cm) tall", etsyUrl: "LINK_GOES_HERE" }
+    ],
+    description: "A shadowy, theatrical sculpt of V, Guy Fawkes mask fixed and cloak caught mid-motion."
   }
 ];
