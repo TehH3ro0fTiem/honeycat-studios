@@ -553,6 +553,10 @@ nav {
 
 /* ===== Compact Grid (Available Models) ===== */
 
+.section-wide {
+    max-width: 1500px;
+}
+
 .browse-main .grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
@@ -560,6 +564,12 @@ nav {
 
 .browse-main .card img {
     height: 320px;
+}
+
+@media (min-width: 1300px) {
+    .browse-main .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* ===== Image Lightbox ===== */
